@@ -4,7 +4,7 @@ import pickle
 import re
 
 def get_loc_dict():
-    with open("data/loc_dict.pkl", "rb") as f:
+    with open("loc_dict.pkl", "rb") as f:
         loc_dict = pickle.load(f)
     return loc_dict
 
