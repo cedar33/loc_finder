@@ -82,7 +82,10 @@ class Finder():
         nation = self.find_nation(text)
         if len(city) > 1:
             if "吉安" in city:
-                city.pop(city.index("吉安"))
+                if self.city_province_dict["吉安"] in province:
+                    pass
+                else:
+                    city.pop(city.index("吉安"))
             elif "吉林" in city and "吉林" in province:
                 city.pop(city.index("吉林"))
             else:
